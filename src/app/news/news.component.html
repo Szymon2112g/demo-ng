@@ -1,0 +1,24 @@
+<H1>{{welcomeMessage}}</H1>
+
+<div class="container">
+  <form (ngSubmit)="saveNews()">
+
+    <fieldset class="form-group">
+      Title  <input type="text" [(ngModel)]="news.title" name="title">
+    </fieldset>
+
+    <fieldset class="form-group">
+      Text <input type="text" [(ngModel)]="news.text" name="text">
+    </fieldset>
+
+    <fieldset class="form-group">
+      Author <input type="text" [(ngModel)]="news.author" name="author">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <button (click)="router.navigate(['mongodb'])" class="btn btn-warning">Back</button>
+      <button type="submit" class="btn btn-success" style="margin-left: 10px">Save</button>
+    </fieldset>
+
+  </form>
+</div>

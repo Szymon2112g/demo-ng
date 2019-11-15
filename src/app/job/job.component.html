@@ -1,0 +1,24 @@
+<H1>{{welcomeMessage}}</H1>
+
+<div class="container">
+  <form (ngSubmit)="saveJob()">
+
+    <fieldset class="form-group">
+      Name  <input type="text" [(ngModel)]="job.name" name="name">
+    </fieldset>
+
+    <fieldset class="form-group">
+      Describe <input type="text" [(ngModel)]="job.describe" name="describe">
+    </fieldset>
+
+    <fieldset class="form-group">
+      Money <input type="text" [(ngModel)]="job.money" name="money">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <button (click)="router.navigate(['hibernate'])" class="btn btn-warning">Back</button>
+      <button type="submit" class="btn btn-success" style="margin-left: 10px">Save</button>
+    </fieldset>
+
+  </form>
+</div>

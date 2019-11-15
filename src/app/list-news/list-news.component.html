@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <div class="row">
+    <button (click)="createNews()" class="btn btn-success">Create News</button>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Author</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tmp of news">
+      <td>{{tmp.id}}</td>
+      <td>{{tmp.title}}</td>
+      <td>{{tmp.text}}</td>
+      <td>{{tmp.author}}</td>
+      <td><button (click)="updateNews(tmp.id)" class="btn btn-warning">Update</button></td>
+      <td><button (click)="deleteNews(tmp.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="row">
+    <button (click)="createJob()" class="btn btn-success">Create Job</button>
+  </div>
+
+  <table class="table">
+    <thead style="background-color: coral ">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Describe</th>
+      <th>Money</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tmp of jobs">
+      <td>{{tmp.id}}</td>
+      <td>{{tmp.name}}</td>
+      <td>{{tmp.describe}}</td>
+      <td>{{tmp.money}}</td>
+      <td><button (click)="updateJob(tmp.id)" class="btn btn-warning">Update</button></td>
+      <td><button (click)="deleteJob(tmp.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

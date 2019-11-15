@@ -1,0 +1,30 @@
+
+
+<div class="container">
+
+  <div class="row">
+    <button (click)="createUser()" class="btn btn-success">Create User</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Point</th>
+        <th>Money</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tmp of users">
+        <td>{{tmp.id}}</td>
+        <td>{{tmp.username}}</td>
+        <td>{{tmp.point}}</td>
+        <td>{{tmp.money}}</td>
+        <td><button (click)="updateUser(tmp.id)" class="btn btn-warning">Update</button></td>
+        <td><button (click)="deleteUser(tmp.id)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
